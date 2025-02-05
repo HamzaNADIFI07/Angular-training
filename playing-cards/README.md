@@ -60,7 +60,7 @@ For more information on using the Angular CLI, including detailed command refere
 
 ## Notes:
 
-### Après premier commit:
+### Après premier commit: **_(04/02/2025)_**
 Pour ce premier commit:
 
 - J'ai pu explorer les premières bases de création de projet Web Angular, avec tous les commandes nécessaires pour l'installation des packages nécessaires, la création du projets, le lancement du server, et la géneration du composant.
@@ -95,3 +95,26 @@ Et qui m'a permit de génerer mon composant qui contient 4 fichiers:
 #### Rendu Visuel du projet:
 
 ![captureEcran](./public/captureEcran.png)
+
+
+### Après deuxième commit: **_(05/02/2025)_**
+Pour ce deuxième commit:
+
+- J'ai pu explorer les décorateur **`@Input()`** qui permet de recevoir soit des variables de differents types (String, Int...) ou bien des objet déjà crée comme dans notre exemple `Monster`, cela nous fera éviter de réecrire le meme code pour chaque meme composants.
+
+1. **`@Input()`** : 
+
+|        Option       |                                                      Explication                                                      |
+|:-------------------:|:---------------------------------------------------------------------------------------------------------------------:|
+| required: true      | Le composant doit obligatoirement recevoir un monstre en entrée.                                                      |
+| alias: 'My-monster' | Permet de renommer l’attribut d’entrée. Dans le parent, au lieu d’écrire `[monster]`, on écrira `[My-monster]`.       |
+| transform           | Fonction exécutée avant d’assigner la valeur à monster. Ici, elle divise les hp du monstre par 2 avant de l'utiliser. |
+
+2. Et dans le code **HTML** du fichier `playing-cards.component.html`, au lieu de mettre les valeur directement, on passe les attributs entre crochet, comme çà:  
+```html
+<div id="name">{{monster.name}}</div>
+```
+
+#### Rendu Visuel du projet:
+
+![captureEcran](./public/captureEcran2.png)
